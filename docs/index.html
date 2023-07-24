@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./bundle.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <section class="sidebar">
+      <div class="logo-title">
+        <div class="logo">
+          <div class="tl"></div>
+          <div class="tr"></div>
+          <div class="bl"></div>
+          <div class="br"></div>
+        </div>
+        <h1>Dashboard</h1>
+      </div>
+      <nav>
+        <ul class="top">
+          <li><i class="fa-solid fa-home"></i>Home</li>
+          <li><i class="fa-regular fa-address-card"></i>Profile</li>
+          <li>
+            <i class="fa-solid fa-message fa-flip-horizontal"></i>Messages
+          </li>
+          <li><i class="fa-solid fa-clock"></i>History</li>
+          <li><i class="fa-solid fa-file"></i>Tasks</li>
+          <li><i class="fa-solid fa-users"></i>Communities</li>
+        </ul>
+      </nav>
+      <nav>
+        <ul class="sub">
+          <li><i class="fa-solid fa-gear"></i>Settings</li>
+          <li><i class="fa-solid fa-circle-question"></i>Support</li>
+          <li><i class="fa-solid fa-shield"></i>Privacy</li>
+        </ul>
+      </nav>
+    </section>
+    <section class="main">
+      <header>
+        <div class="top-row">
+          <div class="label-input">
+            <label for="search" aria-label="search"
+              ><i class="fa-solid fa-magnifying-glass"></i
+            ></label>
+            <input type="text" id="search" name="search" />
+          </div>
+          <div class="info">
+            <i class="fa-regular fa-bell"></i>
+            <img src="./assets//cat.png" alt="avatar" />
+            <span>Morgan Oakley</span>
+          </div>
+        </div>
+        <div class="bottom-row">
+          <div class="badge-greetings">
+            <img src="./assets//cat.png" alt="cat" />
+            <div class="greetings">
+              <small>Hi there,</small>
+              <p>Morgan Oakley (@morgan)</p>
+            </div>
+          </div>
+          <div class="buttons">
+            <button type="button">New</button
+            ><button type="button">Upload</button
+            ><button type="button">Share</button>
+          </div>
+        </div>
+      </header>
+      <div class="container">
+        <div class="projects">
+          <h2>Your Projects</h2>
+          <div class="project-cards" id="project-cards"></div>
+        </div>
+        <div class="announcements">
+          <h2>Announcements</h2>
+          <div class="announcement-card" id="announcement-card"></div>
+        </div>
+        <div class="trending">
+          <h2>Trending</h2>
+          <div class="trending-card" id="trending-card"></div>
+        </div>
+      </div>
+    </section>
+  </body>
+
+  <template id="project-card">
+    <div class="project-card">
+      <div class="side"></div>
+      <h3 class="card-title"></h3>
+      <p class="card-text"></p>
+      <div class="buttons">
+        <button type="button"><i class="fa-regular fa-star"></i></button>
+        <button type="button"><i class="fa-regular fa-eye"></i></button>
+        <button type="button"><i class="fa-solid fa-code-fork"></i></button>
+      </div>
+    </div>
+  </template>
+
+  <template id="announcement">
+    <div class="announcement">
+      <h3 class="announcement-title"></h3>
+      <p class="announcement-text"></p>
+    </div>
+  </template>
+
+  <template id="trend">
+    <div class="trend">
+      <img src="" alt="" />
+      <div class="text">
+        <h3 class="name"></h3>
+        <p class="text"></p>
+      </div>
+    </div>
+  </template>
+</html>
